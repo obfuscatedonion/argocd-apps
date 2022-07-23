@@ -12,8 +12,10 @@ spec:
   project: default
   source:
     chart: longhorn
-#    helm:
-#      values: |
+    helm:
+      values: |
+        persistence:
+          defaultClassReplicaCount: 1
     repoURL: https://charts.longhorn.io
     targetRevision: 1.2.4
   syncPolicy:
