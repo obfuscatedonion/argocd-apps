@@ -15,7 +15,7 @@ spec:
 #    helm:
 #      values: |
     repoURL: https://k8s-at-home.com/charts/
-    targetRevision: 4.10.1
+    targetRevision: 5.0.0
   syncPolicy:
     automated:
       prune: true
