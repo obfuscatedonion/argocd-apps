@@ -34,7 +34,7 @@ spec:
               - host: code.chart-example.local
             paths:
               - path: /
-              pathType: Prefix
+                pathType: Prefix
             tls: []
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
