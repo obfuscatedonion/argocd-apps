@@ -22,20 +22,9 @@ spec:
             accessMode: ReadWriteOnce
             size: 1Gi
             retain: true
-#        service:
-#          main:
-#            type: LoadBalancer
-        ingress:
+        service:
           main:
-            enabled: true
-            annotations: {}
-#              nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-            hosts:
-              - host: 192.168.8.100
-                paths:
-                  - path: /
-                    pathType: Prefix
-            tls: []
+            type: LoadBalancer
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
   syncPolicy:
