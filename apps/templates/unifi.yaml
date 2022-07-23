@@ -18,6 +18,7 @@ spec:
           data:
             enabled: true
             mountPath: /unifi
+            accessMode: ReadWriteOnce
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
   syncPolicy:
