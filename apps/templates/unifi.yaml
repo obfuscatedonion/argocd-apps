@@ -22,7 +22,7 @@ spec:
             accessMode: ReadWriteOnce
             size: 1Gi
             retain: true
-        service:
+#        service:
 #          main:
 #            type: LoadBalancer
         ingress:
