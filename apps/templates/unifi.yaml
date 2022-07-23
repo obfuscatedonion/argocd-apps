@@ -31,10 +31,10 @@ spec:
             annotations: {}
 #              nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
             hosts:
-              - host: code.chart-example.local
-            paths:
-              - path: /
-                pathType: Prefix
+              - host: 192.168.8.100
+                paths:
+                  - path: /
+                    pathType: Prefix
             tls: []
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
