@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: unifi
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: default
+  source:
+    chart: k8s-at-home/unifi
+#    helm:
+#      values: |
+    repoURL: https://k8s-at-home.com
+    targetRevision: 4.10.1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
