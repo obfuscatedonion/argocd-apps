@@ -22,6 +22,11 @@ spec:
             accessMode: ReadWriteOnce
             size: 1Gi
             retain: true
+        ingress:
+          main:
+            enabled: true
+            annotations:
+              nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
   syncPolicy:
