@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    chart: charts/stable/unifi
+    chart: stable/unifi
 #    helm:
 #      values: |
     repoURL: https://k8s-at-home.com/charts/
