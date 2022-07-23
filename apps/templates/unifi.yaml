@@ -12,8 +12,12 @@ spec:
   project: default
   source:
     chart: unifi
-#    helm:
-#      values: |
+    helm:
+      values: |
+        persistence:
+          data:
+            enabled: true
+            mountPath: /unifi
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
   syncPolicy:
