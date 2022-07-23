@@ -14,7 +14,7 @@ spec:
     chart: k8s-at-home/unifi
 #    helm:
 #      values: |
-    repoURL: https://k8s-at-home.com
+    repoURL: https://k8s-at-home.com/charts/
     targetRevision: 4.10.1
   syncPolicy:
     automated:
