@@ -23,14 +23,19 @@ spec:
             size: 1Gi
             retain: true
         service:
-          main:
-            type: LoadBalancer
-#        ingress:
 #          main:
-#            enabled: true
-#            annotations:
+#            type: LoadBalancer
+        ingress:
+          main:
+            enabled: true
+            annotations: {}
 #              nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-
+            hosts:
+              - host: code.chart-example.local
+            paths:
+              - path: /
+              pathType: Prefix
+            tls: []
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
   syncPolicy:
