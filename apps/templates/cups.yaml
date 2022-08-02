@@ -16,7 +16,7 @@ spec:
       values: |
         nodeSelector:
           dstack.uk/printer=true
-    repoURL: https://github.com/truecharts/catalog
+    repoURL: https://charts.truecharts.org/
     targetRevision: 1.0.29
   syncPolicy:
     automated:
