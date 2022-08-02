@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cups-server
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: default
+  source:
+    chart: cups-server
+    helm:
+      values: |
+        nodeSelector:
+          dstack.uk/printer=true
+    repoURL: https://helm.truecharts.org
+    targetRevision: 1.0.29
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
