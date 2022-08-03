@@ -23,8 +23,32 @@ spec:
             size: 1Gi
             retain: true
         service:
+          # Define separate LoadBalancer service for UDP ports - cannot have both TCP and UDP on same LB. See https://artifacthub.io/packages/helm/k8s-at-home/unifi#regarding-the-services
           main:
             type: LoadBalancer
+            ports:
+              stun:
+                enabled: false
+              syslog:
+                enabled: false
+              discovery:
+                enabled: false
+          udp:
+            enabled: true
+            type: LoadBalancer
+            ports:
+              stun:
+                enabled: true
+                port: 3478
+                protocol: UDP
+              syslog:
+                enabled: true
+                port: 5514
+                protocol: UDP
+              discovery:
+                enabled: true
+                port: 10001
+                protocol: UDP
     repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.0.0
   syncPolicy:
