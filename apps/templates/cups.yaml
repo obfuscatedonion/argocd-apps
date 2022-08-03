@@ -15,7 +15,7 @@ spec:
     helm:
       values: |
         nodeSelector:
-          dstack.uk/printer: true
+          dstack.uk/device: printer
     repoURL: https://charts.truecharts.org/
     targetRevision: 1.0.29
   syncPolicy:
