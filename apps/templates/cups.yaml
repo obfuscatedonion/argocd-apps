@@ -14,6 +14,9 @@ spec:
     chart: cups-server
     helm:
       values: |
+        controller:
+          # Disable - init container image not ARM compatible
+          replicas: 0
         nodeSelector:
           dstack.uk/printer: "true"
     repoURL: https://charts.truecharts.org/
