@@ -21,7 +21,7 @@ spec:
           dstack.uk/printer: "true"
         persistence:
           config:
-            size: 100Mb
+            size: 100Mi
     repoURL: https://charts.truecharts.org/
     targetRevision: 1.0.29
   syncPolicy:
