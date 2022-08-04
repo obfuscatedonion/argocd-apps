@@ -50,7 +50,7 @@ spec:
                 port: 10001
                 protocol: UDP
     repoURL: https://k8s-at-home.com/charts/
-    targetRevision: 5.0.0
+    targetRevision: 5.1.2
   syncPolicy:
     automated:
       prune: false
