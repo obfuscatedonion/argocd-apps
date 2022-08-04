@@ -19,6 +19,9 @@ spec:
           replicas: 0
         nodeSelector:
           dstack.uk/printer: "true"
+        persistence:
+          config:
+            size: 100Mb
     repoURL: https://charts.truecharts.org/
     targetRevision: 1.0.29
   syncPolicy:
